@@ -28,10 +28,10 @@ app.config(function ($routeProvider) {
 });
 
 app.controller('memberController', function ($scope, $http) {
-    $http.get('http://localhost:8888/yaso-coop/services/login/get').then(function(response){
+    $http.get('http://localhost:8888/yaso-coop/services/member/data').then(function(response){
         
-        if(response.data.status == 200){
-            $scope.data = response.data.data;
+        if(response){
+            $scope.data = response.data;
         }
 
     });

@@ -11,14 +11,14 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$app->get('/', function () use ($app) {
+    return $app->version();
 });
 
-$router->get('/key',function () use ($router) {
+$app->get('/key',function () use ($app) {
     $key = str_random(32);
     return $key;
 });
 
-$router->get('/login/get','Api\LoginController@getData');
-$router->post('/login/post','Api\LoginController@postData');
+$app->get('/member/data','MemberController@getData');
+$app->post('/member/data','MemberController@postData');
