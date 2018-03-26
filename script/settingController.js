@@ -6,12 +6,12 @@ angular.module('myApp')
             $scope.submit = function(){
                 if ($scope.password == $scope.repassword && $scope.password != null && $scope.repassword != null){
 
-                    $http.post('http://localhost:8888/yaso-coop/services/member/changepassword', { token: token, new_password: btoa($scope.password) }).then(function (response) {
+                    $http.post('http://system.cayasocoop.or.th/services/member/changepassword', { token: token, new_password: btoa($scope.password) }).then(function (response) {
 
                         if (response && response.data != '') {
                             console.log(response);
                             swal("บันทึกข้อมูลสำเร็จ", "", "success")
-                            
+
                         }else{
                             swal("บันทึกไม่สำเร็จ", "", "error")
                             $scope.password = null;
@@ -19,8 +19,8 @@ angular.module('myApp')
                         }
 
                     });
-                    
-                    
+
+
                     swal("บันทึกข้อมูลสำเร็จ", "", "success")
                     $scope.password = null;
                     $scope.repassword = null;
@@ -29,8 +29,8 @@ angular.module('myApp')
                     swal("รหัสผ่านไม่ตรงกัน", "", "info")
                 }
             }
-            
 
-            
+
+
 
         }]);

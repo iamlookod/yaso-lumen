@@ -8,7 +8,7 @@ angular.module('Authentication')
                 var service = {};
 
                 service.Login = function (username, password, callback) {
-                    $http.post('http://localhost:8888/yaso-coop/services/login/post', { username: username, password: password })
+                    $http.post('http://system.cayasocoop.or.th/services/login/post', { username: username, password: password })
                        .then(function (response) {
                            callback(response);
                        });
