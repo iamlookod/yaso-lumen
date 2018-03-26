@@ -3,17 +3,58 @@
         <div class="card col-md-12">
             <div class="card-body">
                 <div class="col-md-12 form-row">
+                    
+                    <div class="form-group col">
+                        <label for="inputEmail4">วันที่สมัคร</label>
+                        <input type="text" class="form-control" id="date_rq" value="{{ data.member_date_rq }}" ng-model="date_rq" readonly>
+                    </div>
+                    <div class="form-group col">
+                        <label for="inputEmail4">วันที่อนุมัติ</label>
+                        <input type="text" class="form-control" id="date_rg" value="{{ data.member_date_rg }}" ng-model="date_rg" readonly>
+                    </div>
+                    <div class="form-group col">
+                        <label for="inputEmail4">สถานะสมาชิก</label>
+                        <input type="text" class="form-control" id="member_status" value="{{ data.status_member_name }}" readonly>
+                    </div>
+                    
+
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="card col-md-12 mt-3">
+            <div class="card-body">
+                
+                <div class="col-md-12 form-row">
+                    <div class="form-group col">
+                        <label for="inputEmail4">เลขที่สมาชิก</label>
+                        <input type="text" class="form-control" id="idmember" value="{{ data.member_idca }}" readonly>
+                    </div>
+                    <div class="form-group col">
+                        <label for="inputEmail4">ประเภทสมาชิก</label>
+                        <input type="text" class="form-control" id="member_type" value="{{ data.type_member_name }}" readonly>
+                    </div>
+                    <div class="form-group col">
+                        <label for="inputEmail4">หน่วยสมาชิก</label>
+                        <input type="text" class="form-control" id="unit" value="{{ data.unit_member_name }}" readonly>
+                    </div>
+                    
+                
+                </div>
+
+                <div class="col-md-12 form-row">
                     <div class="form-group col-md-2">
                         <label for="inputEmail4">คำนำหน้า</label>
-                        <input type="text" class="form-control" id="surename" placeholder="surename" value="{{ data.member_surname }}" readonly>
+                        <input type="text" class="form-control" id="surename" value="{{ data.member_surname }}" readonly>
                     </div>
                     <div class="form-group col-md-5">
                         <label for="inputEmail4">ชื่อ</label>
-                        <input type="text" class="form-control" id="firstname" placeholder="firstname" value="{{ data.member_name }}" readonly>
+                        <input type="text" class="form-control" id="firstname" value="{{ data.member_name }}" readonly>
                     </div>
                     <div class="form-group col-md-5">
                         <label for="inputEmail4">นามสกุล</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="lastname" value="{{ data.member_lastname }}" readonly>
+                        <input type="text" class="form-control" id="lastname" value="{{ data.member_lastname }}" readonly>
                     </div>
 
                 </div>
@@ -21,15 +62,15 @@
                 <div class="col-md-12 form-row">
                     <div class="form-group col-md-4">
                         <label for="inputEmail4">เลขที่บัตรประชาชน</label>
-                        <input type="text" class="form-control" id="idcard" placeholder="idcard" value="{{ data.member_idcard }}" readonly>
+                        <input type="text" class="form-control" id="idcard" value="{{ data.member_idcard }}" readonly>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputEmail4">วันเดือนปีเกิด</label>
-                        <input type="text" class="form-control" id="birthdate" placeholder="birthdate" value="{{ data.member_birth }}" readonly>
+                        <input type="text" class="form-control" id="birthdate" value="{{ data.member_birth }}" ng-model="birthdate" readonly>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputEmail4">โทรศัพท์</label>
-                        <input type="text" class="form-control" id="phone" placeholder="phone" value="{{ data.member_phone }}" readonly>
+                        <input type="text" class="form-control" id="phone" value="{{ data.member_phone }}" readonly>
                     </div>
                 
                 </div>
@@ -41,29 +82,161 @@
                 <div class="col-md-12 form-row">
                     <div class="form-group col-md-12">
                         <label for="inputEmail4">ที่อยู่</label>
-                        <input type="text" class="form-control" id="address" placeholder="address" value="{{ data.member_address }}" readonly>
+                        <input type="text" class="form-control" id="address" value="{{ data.member_address }}" readonly>
                     </div>
+                    
                 </div>
         
                 <div class="col-md-12 form-row">
                     <div class="form-group col-md-3">
                         <label for="inputEmail4">ตำบล</label>
-                        <input type="text" class="form-control" id="tumbon" placeholder="tumbon" value="{{ data.member_tumbon }}" readonly>
+                        <input type="text" class="form-control" id="tumbon" value="{{ data.member_tumbon }}" readonly>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="inputEmail4">อำเภอ</label>
-                        <input type="text" class="form-control" id="amphur" placeholder="amphur" value="{{ data.member_ampur }}" readonly>
+                        <input type="text" class="form-control" id="amphur" value="{{ data.member_ampur }}" readonly>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="inputEmail4">จังหวัด</label>
-                        <input type="text" class="form-control" id="province" placeholder="province" value="{{ data.member_province }}" readonly>
+                        <input type="text" class="form-control" id="province" value="{{ data.member_province }}" readonly>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="inputEmail4">รหัสไปรษณีย</label>
-                        <input type="text" class="form-control" id="idpost" placeholder="idpost" value="{{ data.member_idpost }}" readonly>
+                        <input type="text" class="form-control" id="idpost" value="{{ data.member_idpost }}" readonly>
                     </div>
         
                 </div>
+
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">ที่อยู่จัดส่งเอกสาร</label>
+                        <input type="text" class="form-control" id="address_receive" value="{{ data.member_address_receive }}" readonly>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card col-md-12 mt-3">
+            <div class="card-body">
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">คู่สมรส</label>
+                        <input type="text" class="form-control" id="mate" value="{{ data.member_mate }}" readonly>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card col-md-12 mt-3">
+            <div class="card-body">
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-7">
+                        <label for="inputEmail4">ชื่อผู้จัดการศพ</label>
+                        <input type="text" class="form-control" id="manate_name" value="{{ data.member_manate_name }}" readonly>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="inputEmail4">ความสัมพันธ์ผู้จัดการศพ</label>
+                        <input type="text" class="form-control" id="manate_relation" value="{{ data.member_manate_relation }}" readonly>
+                    </div>
+                </div>
+
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">ที่อยู่ผู้จัดการศพ</label>
+                        <input type="text" class="form-control" id="manate_address" value="{{ data.member_manate_address }}" readonly>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card col-md-12 mt-3">
+            <div class="card-body">
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-7">
+                        <label for="inputEmail4">ชื่อผู้รับผลประโยชน์ที่ 1</label>
+                        <input type="text" class="form-control" id="benefit_name1" value="{{ data.member_benefit_name1 }}" readonly>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="inputEmail4">ความสัมพันธ์ผู้รับผลประโยชน์ที่ 1</label>
+                        <input type="text" class="form-control" id="benefit_relation1" value="{{ data.member_benefit_relation1 }}" readonly>
+                    </div>
+                </div>
+
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">ที่อยู่ผู้รับผลประโยชน์ที่ 1</label>
+                        <input type="text" class="form-control" id="benefit_address1" value="{{ data.member_benefit_address1 }}" readonly>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card col-md-12 mt-3">
+            <div class="card-body">
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-7">
+                        <label for="inputEmail4">ชื่อผู้รับผลประโยชน์ที่ 2</label>
+                        <input type="text" class="form-control" id="benefit_name2" value="{{ data.member_benefit_name2 }}" readonly>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="inputEmail4">ความสัมพันธ์ผู้รับผลประโยชน์ที่ 2</label>
+                        <input type="text" class="form-control" id="benefit_relation2" value="{{ data.member_benefit_relation2 }}" readonly>
+                    </div>
+                </div>
+
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">ที่อยู่ผู้รับผลประโยชน์ที่ 2</label>
+                        <input type="text" class="form-control" id="benefit_address2" value="{{ data.member_benefit_address2 }}" readonly>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card col-md-12 mt-3">
+            <div class="card-body">
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-7">
+                        <label for="inputEmail4">ชื่อผู้รับผลประโยชน์ที่ 3</label>
+                        <input type="text" class="form-control" id="benefit_name2" value="{{ data.member_benefit_name2 }}" readonly>
+                    </div>
+                    <div class="form-group col-md-5">
+                        <label for="inputEmail4">ความสัมพันธ์ผู้รับผลประโยชน์ที่ 2</label>
+                        <input type="text" class="form-control" id="benefit_relation2" value="{{ data.member_benefit_relation2 }}" readonly>
+                    </div>
+                </div>
+        
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">ที่อยู่ผู้รับผลประโยชน์ที่ 2</label>
+                        <input type="text" class="form-control" id="benefit_address2" value="{{ data.member_benefit_address2 }}" readonly>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        <div class="card col-md-12 mt-3 mb-3">
+            <div class="card-body">
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">รูปแบบเงื่อนไขที่ 1</label>
+                        <input type="text" class="form-control" id="choice" value="{{ data.condition_member_details }}" readonly>
+                    </div>
+                </div>
+
+                <div class="col-md-12 form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">รูปแบบเงื่อนไขที่ 2</label>
+                        <input type="text" class="form-control" id="choice2" value="{{ data.member_choice2 }}" readonly>
+                    </div>
+                </div>
+
             </div>
         </div>
 

@@ -1,15 +1,26 @@
 <main role="main" class="container mt-5">
     <div class="row justify-content-md-center">
         
-
-        <form class="col-md-6">
+        
+        <form class="col-md-6" name="form" role="form" ng-submit="login()">
+            <div class="form-group text-center">
+                <img src="asset/img/logo.png" alt="" class="img img-responsive" style="width: 50%;">
+            </div>
+            <div ng-show="error" class="alert alert-danger alert-dismissible fade show" role="alert">
+                 {{error}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             <div class="form-group">
                 <label for="exampleInputEmail1" class="sr-only">Email address</label>
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-user"></i></div>
+                        <div class="input-group-text">
+                            <i class="fas fa-user"></i>
+                        </div>
                     </div>
-                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="ชื่อผู้ใช้" ng-model="username">
                 </div>
 
 
@@ -18,13 +29,15 @@
                 <label for="exampleInputPassword1" class="sr-only">Password</label>
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
-                        <div class="input-group-text">@</div>
+                        <div class="input-group-text">
+                            <i class="fas fa-key"></i>
+                        </div>
                     </div>
-                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Password">
+                    <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="รหัสผ่าน" ng-model="password">
                 </div>
             </div>
             
-            <button type="submit" class="btn btn-primary btn-flat btn-block">Submit</button>
+            <button type="submit" class="btn btn-info btn-flat btn-block">ลงชื่อเข้าใช้</button>
         </form>
 
     </div>

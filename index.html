@@ -5,23 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Yaso-Coop</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="asset/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="asset/img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="asset/img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="asset/img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="asset/img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="asset/img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="asset/img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="asset/img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="asset/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="asset/img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="asset/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="asset/img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="asset/img/favicon-16x16.png">
+    <link rel="manifest" href="asset/img/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="asset/img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css?ver=2">
     
-    <link rel="stylesheet" href="node_modules/fontawesome/css/fontawesome-all.min.css">
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="node_modules/fontawesome/css/fontawesome-all.min.css?ver=2">
+    <script src="node_modules/jquery/dist/jquery.min.js?ver=2"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js?ver=2"></script>
 
     
-    <link rel="stylesheet" href="asset/css/sweetalert.css">
+    <link rel="stylesheet" href="asset/css/sweetalert.css?ver=2">
 
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/angular/angular.min.js?ver=2"></script>
+    <script src="node_modules/angular-route/angular-route.min.js?ver=2"></script>
+    <script src="node_modules/angular-cookies/angular-cookies.min.js?ver=2"></script>
+
     <!-- sweetalert -->
-    <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="node_modules/ng-sweet-alert/ng-sweet-alert.js"></script>
+    <script src="node_modules/sweetalert/dist/sweetalert.min.js?ver=2"></script>
+    <script src="node_modules/ng-sweet-alert/ng-sweet-alert.js?ver=2"></script>
     <!-- page loader -->
-    <link rel="stylesheet" href="node_modules/angular-page-loader/dist/angular-page-loader.css">
-    <script type="text/javascript" src="node_modules/angular-page-loader/dist/angular-page-loader.min.js"></script>
+    <link rel="stylesheet" href="node_modules/angular-page-loader/dist/angular-page-loader.css?ver=2">
+    <script type="text/javascript" src="node_modules/angular-page-loader/dist/angular-page-loader.min.js?ver=2"></script>
+
+    
 
 </head>
 <body ng-app="myApp" style="background-color: #f5f5f5;" ng-cloak>
@@ -35,7 +57,7 @@
 
         <div class="navbar-collapse collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto"></ul>   
-            <button class="btn btn-outline-light my-2 my-sm-0" type="button">Log out</button>
+            <!-- <button class="btn btn-outline-light my-2 my-sm-0" type="button" ng-click="logout()">Log out</button> -->
             
         </div>
     </nav>
@@ -43,7 +65,11 @@
     <div ng-view></div>
     
     <!-- /.container -->
-    <script src="asset/js/app.js"></script>
+    <script src="script/app.js?ver=2"></script>
+    <script src="module/services.js?ver=2"></script>
+    <script src="script/loginController.js?ver=2"></script>
+    <script src="script/memberController.js?ver=2"></script>
+    <script src="script/settingController.js?ver=2"></script>
 
 </body>
 </html>

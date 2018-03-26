@@ -19,6 +19,8 @@ $app->get('/key',function () use ($app) {
     $key = str_random(32);
     return $key;
 });
-
-$app->get('/member/data','MemberController@getData');
+// login
+$app->post('/login/post','LoginController@postLogin');
+// member
 $app->post('/member/data','MemberController@postData');
+$app->post('/member/changepassword','MemberController@postPassword');

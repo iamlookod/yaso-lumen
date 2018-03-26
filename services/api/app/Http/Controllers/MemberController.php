@@ -10,21 +10,27 @@ use App\Model\Member;
 
 class MemberController extends BaseController
 {
-    public function getData(){
-        $username = "3350100215311";
-        $password = "000001";
+    
+    public function postData(Request $request){
+        $token = $request->input('token');
 
-        $items = Member::where('member_idcard','=',$username)->where('member_idca','=',$password)->first();
+        $items = Member::join('type_member' ,'member_type', '=', 'type_member_id')
+                    ->join('status_member', 'member_status', '=', 'status_member_id')
+                    ->join('condition_member', 'member_choice', '=', 'condition_member_id')
+                    ->join('unit_member', 'member_unit', '=', 'unit_member_id')
+                    ->where('token','=',$token)->first();
 
         return $items;
     }
 
-    public function postData(Request $request){
-        $username = $request->input('username');
-        $password = $request->input('password');
+    public function postPassword(Request $request){
+        $token = $request->input('token');
 
-        $items = Member::where('member_idcard','=',$username)->where('member_idca','=',$password)->first();
+        $password = $request->input('new_password');
+
+        $items = Member::where('token','=',$token)->update(['password'=>$password]);
 
         return $items;
+
     }
 }
