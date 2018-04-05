@@ -6,7 +6,7 @@ angular.module('myApp')
             $scope.submit = function(){
                 if ($scope.password == $scope.repassword && $scope.password != null && $scope.repassword != null){
 
-                    $http.post('http://system.cayasocoop.or.th/services/member/changepassword', { token: token, new_password: btoa($scope.password) }).then(function (response) {
+                    $http.post('http://localhost:8888/yaso-coop/services/member/changepassword', { token: token, new_password: btoa($scope.password) }).then(function (response) {
 
                         if (response && response.data != '') {
                             console.log(response);

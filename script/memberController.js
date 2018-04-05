@@ -2,7 +2,7 @@ angular.module('myApp')
     .controller('memberController', ['$http','$scope', '$rootScope', '$location', 'AuthenticationService',
         function ($http, $scope, $rootScope, $location, AuthenticationService) {
             var token = $rootScope.user.currentUser.token;
-            $http.post('http://system.cayasocoop.or.th/services/member/data', { token: token  }).then(function (response) {
+            $http.post('http://localhost:8888/yaso-coop/services/member/data', { token: token  }).then(function (response) {
 
                 if (response) {
                     $scope.data = response.data;
